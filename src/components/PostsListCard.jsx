@@ -1,7 +1,13 @@
 import React from 'react';
 
-const PostsListCard = () => {
-  return <div>individual blog cards returned in list here</div>;
+const PostsListCard = ({ title, author, posted }) => {
+  return (
+    <div>
+      <div>{title}</div>
+      <div>{author}</div>
+      <div>{posted}</div>
+    </div>
+  );
 };
 
 export default PostsListCard;
