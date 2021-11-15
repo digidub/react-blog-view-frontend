@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Fragment } from 'react/cjs/react.production.min';
+import styled from 'styled-components';
 import { Server } from '../tools/services';
 import PostsListCard from './PostsListCard';
 
@@ -24,7 +24,13 @@ const PostsList = () => {
       />
     ));
 
-  return <Fragment>{posts && listOfPosts()}</Fragment>;
+  return <PostsTable>{posts && listOfPosts()}</PostsTable>;
 };
 
 export default PostsList;
+
+const PostsTable = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
